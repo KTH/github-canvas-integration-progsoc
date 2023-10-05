@@ -37,10 +37,10 @@ def parse_criteria():
     for section in sections[1:]:
         items = section.split("\n\n\n")
         print(f"section: {section} len:{len(items)}" )
-        result[items[0].strip().replace(" (mandatory)", "")] = {}
-        result[items[0].strip().replace(" (mandatory)", "")]['description'] = items[1]
-        result[items[0].strip().replace(" (mandatory)", "")]['table'] = parse_table(items[2])
-        result[items[0].strip().replace(" (mandatory)", "")]['grading'] = items[3]
+        result[items[0].strip().replace("(mandatory)", "")] = {}
+        result[items[0].strip().replace("(mandatory)", "")]['description'] = items[1]
+        result[items[0].strip().replace("(mandatory)", "")]['table'] = parse_table(items[2])
+        result[items[0].strip().replace("(mandatory)", "")]['grading'] = items[3]
         print(f"result: {result}")
     validate_criteria(result)
     return result
