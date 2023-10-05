@@ -68,10 +68,10 @@ def parse_table(table):
 # Validation of the parsed criteria: Tasks, task items, tables items
 def validate_criteria(criteria):
     task = [
-        "Smart Contract Protocol",
         "Presentations",
-        "Essays",
         "Demos",
+        "Smart Contract Protocol",
+        "Essays",
         "Open-source contributions",
         "Feedback"
     ]
