@@ -36,12 +36,10 @@ def parse_criteria():
 
     for section in sections[1:]:
         items = section.split("\n\n\n")
-        print(f"section: {section} len:{len(items)}" )
         result[items[0].strip().replace(" (mandatory)", "")] = {}
         result[items[0].strip().replace(" (mandatory)", "")]['description'] = items[1]
         result[items[0].strip().replace(" (mandatory)", "")]['table'] = parse_table(items[2])
         result[items[0].strip().replace(" (mandatory)", "")]['grading'] = items[3]
-        print(f"result: {result}")
     validate_criteria(result)
     return result
 
@@ -86,7 +84,6 @@ def validate_criteria(criteria):
 
     print("Checking the grading file format...")
     if list(criteria.keys()) != task:
-        print(f"str(list(criteria.keys())): {str(list(criteria.keys()))}, and str(task): {str(task)}")
         errors = errors + ("Assignments don't match" + str(task) + '\n\n')
 
     for task in criteria:
