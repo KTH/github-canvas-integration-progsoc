@@ -2,7 +2,7 @@
 
 ## About it
 
-This tools was created for the course [DD2482 Automated Software Testing and DevOps](https://www.kth.se/student/kurser/kurs/DD2482?l=en) at KTH and is meant to create an interface between the course [GitHub repository](https://github.com/KTH/devops-course) and the Canvas.
+This tools was created for the course [DD2485 Programmable Society with Smart Contracts](https://www.kth.se/student/kurser/kurs/DD2485?l=en) at KTH and is meant to create an interface between the course [GitHub repository](https://github.com/KTH/programmable-society) and the Canvas.
 
 For educational purpose, all the assignments registration are done on GitHub. And the goal of this tool is to replicate and keep up to date all the assignment and groups with Canvas.
 
@@ -14,7 +14,7 @@ In the GitHub secrets, you need to add the following :
 |---|---|
 | CANVAS_TOKEN |  Canvas access token generated [on your profile](https://canvas.kth.se/profile/settings) |
 | CANVAS_COURSE_ID | Course ID of the Canvas course  | 
-| GH_REPO_FULLNAME  | Full name of the repo using running the code (e.g. KTH/devops-course)  | 
+| GH_REPO_FULLNAME  | Full name of the repo using running the code (e.g. KTH/programmable-society)  | 
 | GH_TOKEN  |  GitHub access token generated [on your profile](https://github.com/settings/tokens) | 
 
 - The *CANVAS_* secrets are used to interact with the canvas server (e.g. manage assignments, groups, ...)
