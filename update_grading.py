@@ -37,7 +37,6 @@ def parse_criteria():
     for section in sections[1:]:
         items = section.split("\n\n\n")
         print(f"section: {section} len:{len(items)}" )
-        print(f"should work: {items[0].strip().replace(" (mandatory)", "")}")
         result[items[0].strip().replace(" (mandatory)", "")] = {}
         result[items[0].strip().replace(" (mandatory)", "")]['description'] = items[1]
         result[items[0].strip().replace(" (mandatory)", "")]['table'] = parse_table(items[2])
