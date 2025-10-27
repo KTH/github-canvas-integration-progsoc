@@ -109,6 +109,7 @@ class Course:
         print(url)
         print(self.header)
         r = requests.get(url, headers=self.header)
+        print(r)
         return {group["name"]: group["id"] for group in json.loads(r.content)}
 
 
