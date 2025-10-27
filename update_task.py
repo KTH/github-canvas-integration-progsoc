@@ -110,7 +110,7 @@ def task_to_group_category_id(task_name, canvas_groups_set):
     mapping = {
         "smart-contract-protocol": canvas_groups_set["Smart Contract Protocol"],
         "demo": canvas_groups_set["Demos"],
-        "paper-book-presentation": canvas_groups_set["Paper / Book Presentation"],
+        "paper-book-presentation": canvas_groups_set["Paper / Book Presentations"],
         "feedback": canvas_groups_set["Feedback"],
         "open-source": canvas_groups_set["Open-source Contributions"],
         "presentation": canvas_groups_set["Presentations"],
