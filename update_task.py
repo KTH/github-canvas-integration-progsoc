@@ -107,6 +107,7 @@ def get_sections(path):
 
 # Mapping from github task name to canvas group set id
 def task_to_group_category_id(task_name, canvas_groups_set):
+    print(canvas_group_set) # debug
     mapping = {
         "smart-contract-protocol": canvas_groups_set["Smart Contract Protocol"],
         "demo": canvas_groups_set["Demos"],
