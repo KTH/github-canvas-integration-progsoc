@@ -84,7 +84,7 @@ def validate_criteria(criteria):
 
     print("Checking the grading file format...")
     if list(criteria.keys()) != task:
-        errors = errors + ("Assignments don't match" + str(task) + '\n\n')
+        errors = errors + ("Assignments don't match" + str(task) + 'vs. ' + str(criteria.keys()) + '\n\n')
 
     for task in criteria:
         if list(criteria[task].keys()) != task_items:
