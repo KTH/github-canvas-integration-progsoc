@@ -72,16 +72,7 @@ def check_groups(canvas_groups_category_id, task_name, github_groups):
         registered_user += members
 
     for github_group in github_groups:
-        
-        if task_name == 'essay' or task_name == 'feedback':
-            # check that "task X" is in the README
-            fname = github_groups[github_group]["path"] + '/README.md'
-            content = open(fname).read().lower()
-            
-            assert "task 1" in content \
-                or "task 2" in content \
-                or "task 3" in content , "deadline should be stated exactly as 'task x', eg 'task 1' in " + fname
-            
+                    
         members = github_group.split("-")
         for member in members:
             if member in registered_user and github_group not in groups_canvas:
@@ -119,9 +110,9 @@ def task_to_group_category_id(task_name, canvas_groups_set):
     mapping = {
         "smart-contract-protocol": canvas_groups_set["Smart Contract Protocol"],
         "demo": canvas_groups_set["Demos"],
-        "essay": canvas_groups_set["Essays"],
+        "paper-book-presentation": canvas_groups_set["Paper/Book Presentation"],
         "feedback": canvas_groups_set["Feedback"],
-        "open-source": canvas_groups_set["Open-source contributions"],
+        "open-source": canvas_groups_set["Open-source Contributions"],
         "presentation": canvas_groups_set["Presentations"],
     }
     return mapping.get(task_name, Exception("Groupset mapping"))
@@ -166,8 +157,9 @@ def main():
         github_groups = dict()
         # Get GitHbs groups and check with canvas group set
         canvas_groups_category_id = task_to_group_category_id(task_name, canvas_groups_set)
-            
-        if task_name == 'presentation' or task_name == 'demo':
+
+        weekly_tasks = ['presentation', 'demo', 'paper-book-presentation', 'smart-contract-protocol']
+        if task_name in weekly_tasks:
             weeks = get_sub_directory(github_tasks[task_name]["path"])
             for week in weeks:
                 if not week.startswith('week'):
