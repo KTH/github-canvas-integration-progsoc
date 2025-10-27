@@ -108,12 +108,12 @@ def get_sections(path):
 # Mapping from github task name to canvas group set id
 def task_to_group_category_id(task_name, canvas_groups_set):
     mapping = {
-        "smart-contract-protocol": canvas_groups_set["Smart Contract Protocol (mandatory)"],
-        "demo": canvas_groups_set["Demos (mandatory)"],
+        "smart-contract-protocol": canvas_groups_set["Smart Contract Protocol"],
+        "demo": canvas_groups_set["Demos"],
         "paper-book-presentation": canvas_groups_set["Paper / Book Presentation"],
         "feedback": canvas_groups_set["Feedback"],
         "open-source": canvas_groups_set["Open-source Contributions"],
-        "presentation": canvas_groups_set["Presentations (mandatory)"],
+        "presentation": canvas_groups_set["Presentations"],
     }
     return mapping.get(task_name, Exception("Groupset mapping"))
 
