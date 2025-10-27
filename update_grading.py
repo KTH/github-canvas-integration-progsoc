@@ -69,9 +69,9 @@ def validate_criteria(criteria):
         "Presentations",
         "Demos",
         "Smart Contract Protocol",
-        "Paper / Book Presentations",
         "Open-source Contributions",
-        "Feedback"
+        "Feedback",
+        "Paper / Book Presentations"
     ]
     task_items = [
         "description",
